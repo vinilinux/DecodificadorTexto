@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Decodificador</title>
 </head>
 <body>
+    <script src="script/script.js"></script>
     <main>
         <section id="inputTexto">
-            <textarea name="textoSemCriptografia" id="textoSemCriptografia"></textarea>
+            <textarea name="textoSemCriptografia" id="textoSemCriptografia" cols="100">Digite seu texto</textarea>
         </section>
         <section id="buttonSection">
             <p>Apenas letras minúsculas e sem acento.</p>
-            <button type="submit" name="buttonCriptografar">Criptografar</button>
-            <button type="submit" name="buttonDescriptografar">Descriptografar</button>
+            <button type="submit" name="buttonCriptografar" onclick="criptografar()">Criptografar</button>
+            <button type="submit" name="buttonDescriptografar" onclick="descriptar()">Descriptografar</button>
         </section>
         <section id="apresentacaoSection">
-            
-            <button name="buttonCopiar">Copiar</button>
+            <div id="divSemTextoCriptografado">
+                <img src="img/boneco-com-lupa.png" alt="">
+                <h3>Nenhuma mensagem <br> encontrada</h3>
+                <p>Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
+            </div>
+            <button name="buttonCopiar" id="buttonCopiar" style="visibility:hidden;" >Copiar</button>
         </section>
     </main>
 
